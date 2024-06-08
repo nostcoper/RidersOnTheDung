@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio;
+
 
 public class MenuInicial : MonoBehaviour
 {
-    public AudioSource clip;
+
     public void Jugar(){
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("Nivel");
     }
 

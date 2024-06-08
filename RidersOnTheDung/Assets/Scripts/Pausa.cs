@@ -48,9 +48,13 @@ public class Pausa : MonoBehaviour
         Time.timeScale = 1f;
         ButtonPausa.SetActive(true);
         menuPausa.SetActive(false);
-        //DontDestroyOnLoad(gameObject);
-        //SceneManager.UnloadSceneAsync("Nivel");
         SceneManager.LoadScene("Nivel");
+        StartCoroutine(DestroyAfterLoad());
+    }
+
+    private IEnumerator DestroyAfterLoad() {
+        yield return null; // Esperar hasta el siguiente frame para asegurarse de que la escena se ha cargado
+        Destroy(gameObject);
     }
 
 
@@ -62,7 +66,7 @@ public class Pausa : MonoBehaviour
         
         
         // Descarga la escena del juego actual
-        SceneManager.UnloadSceneAsync("Nivel");
+        //SceneManager.UnloadSceneAsync("Nivel");
         SceneManager.LoadScene("MenuPrincipal");
     }
     /*

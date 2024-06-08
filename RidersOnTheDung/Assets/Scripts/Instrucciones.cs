@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio;
+
 
 public class Instrucciones : MonoBehaviour
 {
-    public AudioSource clip;
+
     public void Atras(){
         SceneManager.LoadScene("MenuPrincipal");
     }
@@ -16,7 +16,5 @@ public class Instrucciones : MonoBehaviour
         SceneManager.LoadScene("Creditos");
     }
 
-    public void PlaySoundBtn(AudioClip audio){
-        clip.PlayOneShot(audio);
-    }
+    
 }

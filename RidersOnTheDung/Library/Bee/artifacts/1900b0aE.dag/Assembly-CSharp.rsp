@@ -368,6 +368,7 @@
 "Assets/Scripts/MenuInicial.cs"
 "Assets/Scripts/MovementManager.cs"
 "Assets/Scripts/Pausa.cs"
+"Assets/Scripts/VideoIntro.cs"
 -langversion:9.0
 
 /deterministic
