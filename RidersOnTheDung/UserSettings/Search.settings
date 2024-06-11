@@ -8,12 +8,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-<<<<<<< HEAD
-=======
 	"last_search.E8DA15E5" = "t:Prefab"
 	"OpenInspectorPreview.E8DA15E5" = "0"
 	"currentGroup.E8DA15E5" = "asset"
->>>>>>> fa3ecf1ed1274c8eb58450780787847dd0df6dc3
 }
 providers = {
 	adb = {
@@ -65,10 +62,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
-<<<<<<< HEAD
-=======
 	"t:Prefab"
->>>>>>> fa3ecf1ed1274c8eb58450780787847dd0df6dc3
 ]
 searchItemFavorites = [
 ]

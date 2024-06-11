@@ -109,7 +109,6 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
--define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -376,14 +375,10 @@
 "Assets/Scripts/Instrucciones.cs"
 "Assets/Scripts/ItemManager.cs"
 "Assets/Scripts/KatamariManager.cs"
-<<<<<<< HEAD
 "Assets/Scripts/MenuInicial.cs"
-"Assets/Scripts/MovementManager.cs"
 "Assets/Scripts/Pausa.cs"
-"Assets/Scripts/VideoIntro.cs"
-=======
 "Assets/Scripts/player/MovementManager.cs"
->>>>>>> fa3ecf1ed1274c8eb58450780787847dd0df6dc3
+"Assets/Scripts/VideoIntro.cs"
 -langversion:9.0
 
 /deterministic
