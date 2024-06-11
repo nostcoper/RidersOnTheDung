@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Nivel.unity
+=======
+- path: Assets/Assets Import/Unvik_3D/Cross_Plains/Scene/Cross_Plains.unity
+>>>>>>> fa3ecf1ed1274c8eb58450780787847dd0df6dc3
   isLoaded: 1
   isActive: 1
   isSubScene: 0

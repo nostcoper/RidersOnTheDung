@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 C:\Users\angel\OneDrive\Documentos\GitHub\RidersOnTheDung\RidersOnTheDung
+=======
+C:\Users\ente0\OneDrive\Escritorio\RidersOnTheDung-main\RidersOnTheDung-main\RidersOnTheDung-main\RidersOnTheDung
+>>>>>>> fa3ecf1ed1274c8eb58450780787847dd0df6dc3

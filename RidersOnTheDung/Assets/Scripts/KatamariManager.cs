@@ -9,10 +9,10 @@ public class KatamariManager : MonoBehaviour
     public GameObject debugSphere;
     public AudioClip[] stickySounds;
     public AudioClip[] impactSounds;
-
-    public float volumeFactor = 3.0f;
+    public Camera camera;
+    public float volumeFactor = 1f;
     public float thresholdGrowthFactor = 0.66f;
-    public float growFactor = 0.6f;
+    public float growFactor = 1f;
     public float stunTime;
     public float forceImpulse = 10000.0f;
     public float torqueImpulse = 1000.0f;
@@ -31,6 +31,7 @@ public class KatamariManager : MonoBehaviour
     private AudioSource audioSource;
     private ParticleSystem particleSys;
     
+    private int GrowCounter = 0; 
 
     private void Start()
     {
@@ -45,6 +46,10 @@ public class KatamariManager : MonoBehaviour
         growthSphereVolume = SphereVolume(growthSphereRadius);
     }
 
+    private void Update(){
+        //Debug.Log("growthSphereRadius: " + growthSphereRadius);
+        //Debug.Log("growthSphereVolume: " + growthSphereVolume);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         GameObject item = collision.gameObject;
@@ -55,6 +60,8 @@ public class KatamariManager : MonoBehaviour
 
             double itemVolume = itemManager.Volume;
             double thresholdVolume = itemVolume * volumeFactor;
+
+           // Debug.Log("thresholdVolume: " + thresholdVolume + ",  itemsSumVolume: " + katamariVolume);
 
             if (katamariVolume >= thresholdVolume)
             {
@@ -69,14 +76,21 @@ public class KatamariManager : MonoBehaviour
             }
         }
     }
+        private void ManageStick(GameObject item)
+        {
+            // Set the parent of the item to this transform
+            item.transform.parent = transform;
 
-    private void ManageStick(GameObject item)
-    {
-        item.transform.parent = transform;
+            // Destroy the Rigidbody component if it exists
+            Destroy(item.GetComponent<Rigidbody>());
 
-        Destroy(item.GetComponent<Rigidbody>());
-        Destroy(item.GetComponent<BoxCollider>());
-    }
+            // Destroy all Collider components if they exist
+            Collider[] colliders = item.GetComponents<Collider>();
+            foreach (Collider collider in colliders)
+            {
+                Destroy(collider);
+            }
+}
 
     private void ManageGrowth(double itemVolume)
     {
@@ -89,9 +103,16 @@ public class KatamariManager : MonoBehaviour
         double outerRingVolume = growthSphereVolume - katamariVolume;
                 
         if (itemsSumVolume >= outerRingVolume * thresholdGrowthFactor)
-        {
+        {   
             Grow();
             Debug.Log("Grow");
+            GrowCounter += 1;
+            Vector3 position = camera.transform.localPosition;
+            position.z -= 6*GrowCounter;
+            position.y += 4*GrowCounter;
+            position.x += 1*GrowCounter;
+            camera.transform.localPosition = position;
+
         }
     }
 
@@ -127,6 +148,10 @@ public class KatamariManager : MonoBehaviour
 
         // Stop katamari torque rotation after 1 second.
         Invoke("StopRotation", 0.5f);
+
+        float newBoundSphere = GetBoundSphere();
+        growthSphereRadius = newBoundSphere;
+        growthSphereVolume = SphereVolume(growthSphereRadius);
     }
     
     private void ThrowItems()
