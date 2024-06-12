@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638537144757817481
+      ticks: 638538166851622565
     m_Hash: 3214931473
   m_LockFileStatus:
     m_FilePath: C:/Users/angel/OneDrive/Documentos/GitHub/RidersOnTheDung/RidersOnTheDung/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638537144757827482
+      ticks: 638538166851622565
     m_Hash: 376142560
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
