@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KatamariManager : MonoBehaviour
+public class DungManager : MonoBehaviour
 {
     public GameObject debugCube;
     public GameObject debugSphere;

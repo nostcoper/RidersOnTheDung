@@ -372,13 +372,14 @@
 "Assets/Scripts/AudioBotones.cs"
 "Assets/Scripts/CameraMenu.cs"
 "Assets/Scripts/Creditos.cs"
+"Assets/Scripts/DungManager.cs"
 "Assets/Scripts/FollowItem.cs"
 "Assets/Scripts/Instrucciones.cs"
 "Assets/Scripts/ItemManager.cs"
-"Assets/Scripts/KatamariManager.cs"
 "Assets/Scripts/MenuInicial.cs"
 "Assets/Scripts/Pausa.cs"
 "Assets/Scripts/player/MovementManager.cs"
+"Assets/Scripts/Timmer/timerScript.cs"
 "Assets/Scripts/VideoIntro.cs"
 -langversion:9.0
 
